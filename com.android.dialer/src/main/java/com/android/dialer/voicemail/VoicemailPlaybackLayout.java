@@ -25,7 +25,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.util.AttributeSet;
-import com.google.android.material.snackbar.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
@@ -39,19 +38,19 @@ import android.widget.Toast;
 import com.android.dialer.PhoneCallDetails;
 import com.android.dialer.R;
 import com.android.dialer.calllog.CallLogAsyncTaskUtil;
-
 import com.android.dialer.database.VoicemailArchiveContract;
 import com.android.dialer.database.VoicemailArchiveContract.VoicemailArchive;
 import com.android.dialer.util.AsyncTaskExecutor;
 import com.android.dialer.util.AsyncTaskExecutors;
 import com.android.dialerbind.ObjectFactory;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.common.annotations.VisibleForTesting;
 
 import java.util.ArrayList;
 import java.util.Objects;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 
 import javax.annotation.Nullable;
 import javax.annotation.concurrent.GuardedBy;

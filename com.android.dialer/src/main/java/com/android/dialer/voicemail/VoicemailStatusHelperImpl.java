@@ -16,14 +16,6 @@
 
 package com.android.dialer.voicemail;
 
-import static android.provider.VoicemailContract.Status.CONFIGURATION_STATE_CAN_BE_CONFIGURED;
-import static android.provider.VoicemailContract.Status.CONFIGURATION_STATE_OK;
-import static android.provider.VoicemailContract.Status.DATA_CHANNEL_STATE_NO_CONNECTION;
-import static android.provider.VoicemailContract.Status.DATA_CHANNEL_STATE_OK;
-import static android.provider.VoicemailContract.Status.NOTIFICATION_CHANNEL_STATE_MESSAGE_WAITING;
-import static android.provider.VoicemailContract.Status.NOTIFICATION_CHANNEL_STATE_NO_CONNECTION;
-import static android.provider.VoicemailContract.Status.NOTIFICATION_CHANNEL_STATE_OK;
-
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.VoicemailContract.Status;
@@ -35,6 +27,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+
+import static android.provider.VoicemailContract.Status.CONFIGURATION_STATE_CAN_BE_CONFIGURED;
+import static android.provider.VoicemailContract.Status.CONFIGURATION_STATE_OK;
+import static android.provider.VoicemailContract.Status.DATA_CHANNEL_STATE_NO_CONNECTION;
+import static android.provider.VoicemailContract.Status.DATA_CHANNEL_STATE_OK;
+import static android.provider.VoicemailContract.Status.NOTIFICATION_CHANNEL_STATE_MESSAGE_WAITING;
+import static android.provider.VoicemailContract.Status.NOTIFICATION_CHANNEL_STATE_NO_CONNECTION;
+import static android.provider.VoicemailContract.Status.NOTIFICATION_CHANNEL_STATE_OK;
 
 /** Implementation of {@link VoicemailStatusHelper}. */
 public class VoicemailStatusHelperImpl implements VoicemailStatusHelper {

@@ -13,10 +13,10 @@
  */
 package com.android.contacts.commonbind;
 
+import android.content.Context;
+
 import com.android.contacts.common.logging.Logger;
 import com.android.contacts.common.preference.PreferenceManager;
-
-import android.content.Context;
 
 /**
  * Creates default bindings for overlays.

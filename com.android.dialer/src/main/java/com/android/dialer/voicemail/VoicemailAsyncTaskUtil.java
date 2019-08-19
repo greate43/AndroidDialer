@@ -16,14 +16,6 @@
 
 package com.android.dialer.voicemail;
 
-import com.android.contacts.common.testing.NeededForTesting;
-import com.android.dialer.calllog.CallLogQuery;
-import com.android.dialer.database.VoicemailArchiveContract;
-import com.android.dialer.util.AsyncTaskExecutor;
-import com.android.dialer.util.AsyncTaskExecutors;
-import com.google.common.base.Preconditions;
-import com.google.common.io.ByteStreams;
-
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -33,7 +25,14 @@ import android.os.AsyncTask;
 import android.provider.CallLog;
 import android.provider.VoicemailContract;
 import android.util.Log;
-import com.android.common.io.MoreCloseables;
+
+import com.android.contacts.common.testing.NeededForTesting;
+import com.android.dialer.calllog.CallLogQuery;
+import com.android.dialer.database.VoicemailArchiveContract;
+import com.android.dialer.util.AsyncTaskExecutor;
+import com.android.dialer.util.AsyncTaskExecutors;
+import com.google.common.base.Preconditions;
+import com.google.common.io.ByteStreams;
 
 import java.io.IOException;
 import java.io.InputStream;

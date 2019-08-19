@@ -21,7 +21,6 @@ import android.provider.CallLog;
 import android.telecom.PhoneAccountHandle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.util.Pair;
 
 import com.android.contacts.common.util.PhoneNumberHelper;
 import com.android.contacts.common.util.TelephonyManagerUtils;
@@ -30,9 +29,7 @@ import com.google.i18n.phonenumbers.NumberParseException;
 import com.google.i18n.phonenumbers.Phonenumber;
 import com.google.i18n.phonenumbers.geocoding.PhoneNumberOfflineGeocoder;
 
-import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 import java.util.Set;
 
 public class PhoneNumberUtil {

@@ -18,7 +18,6 @@ package com.android.dialer.list;
 import android.content.Context;
 import android.content.res.Resources;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.view.View;
 
 import com.android.contacts.common.GeoUtil;

@@ -1,6 +1,5 @@
 package com.android.dialer.list;
 
-import android.util.Log;
 import android.view.View;
 
 import com.android.contacts.common.compat.CompatUtils;

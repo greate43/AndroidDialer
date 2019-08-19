@@ -21,10 +21,11 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.provider.MediaStore;
+import android.util.Log;
+
 import androidx.annotation.Nullable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
-import android.util.Log;
 
 import com.android.contacts.common.GeoUtil;
 import com.android.contacts.common.lettertiles.LetterTileDrawable;

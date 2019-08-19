@@ -27,7 +27,6 @@ import android.provider.ContactsContract;
 import android.provider.ContactsContract.Contacts;
 import android.provider.ContactsContract.Directory;
 import android.provider.ContactsContract.SearchSnippets;
-import androidx.annotation.VisibleForTesting;
 import android.text.TextUtils;
 import android.view.View;
 

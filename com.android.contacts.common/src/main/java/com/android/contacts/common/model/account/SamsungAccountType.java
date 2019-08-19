@@ -16,12 +16,6 @@
 
 package com.android.contacts.common.model.account;
 
-import com.google.common.collect.Lists;
-
-import com.android.contacts.common.R;
-import com.android.contacts.common.model.dataitem.DataKind;
-import com.android.contacts.common.util.CommonDateUtils;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.provider.ContactsContract.CommonDataKinds.Email;
@@ -30,6 +24,11 @@ import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.provider.ContactsContract.CommonDataKinds.Relation;
 import android.provider.ContactsContract.CommonDataKinds.StructuredPostal;
 import android.util.Log;
+
+import com.android.contacts.common.R;
+import com.android.contacts.common.model.dataitem.DataKind;
+import com.android.contacts.common.util.CommonDateUtils;
+import com.google.common.collect.Lists;
 
 import java.util.Locale;
 

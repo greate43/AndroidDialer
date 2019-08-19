@@ -16,12 +16,12 @@
 
 package com.android.contacts.common.activity;
 
-import com.android.contacts.common.R;
-
 import android.Manifest.permission;
 import android.app.Activity;
 import android.content.Intent;
 import android.widget.Toast;
+
+import com.android.contacts.common.R;
 
 /**
  * Activity that requests permissions needed for activities exported from Contacts.

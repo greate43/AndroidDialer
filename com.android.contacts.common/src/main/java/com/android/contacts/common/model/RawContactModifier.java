@@ -47,11 +47,6 @@ import android.util.SparseArray;
 import android.util.SparseIntArray;
 
 import com.android.contacts.common.ContactsUtils;
-import com.android.contacts.common.model.AccountTypeManager;
-import com.android.contacts.common.model.ValuesDelta;
-import com.android.contacts.common.util.CommonDateUtils;
-import com.android.contacts.common.util.DateUtils;
-import com.android.contacts.common.util.NameConverter;
 import com.android.contacts.common.model.account.AccountType;
 import com.android.contacts.common.model.account.AccountType.EditField;
 import com.android.contacts.common.model.account.AccountType.EditType;
@@ -60,6 +55,9 @@ import com.android.contacts.common.model.account.GoogleAccountType;
 import com.android.contacts.common.model.dataitem.DataKind;
 import com.android.contacts.common.model.dataitem.PhoneDataItem;
 import com.android.contacts.common.model.dataitem.StructuredNameDataItem;
+import com.android.contacts.common.util.CommonDateUtils;
+import com.android.contacts.common.util.DateUtils;
+import com.android.contacts.common.util.NameConverter;
 
 import java.text.ParsePosition;
 import java.util.ArrayList;

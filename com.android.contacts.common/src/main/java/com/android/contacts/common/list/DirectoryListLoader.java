@@ -23,12 +23,10 @@ import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.net.Uri;
 import android.os.Handler;
-import android.provider.ContactsContract;
 import android.provider.ContactsContract.Directory;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.android.contacts.common.ContactsUtils;
 import com.android.contacts.common.R;
 import com.android.contacts.common.compat.DirectoryCompat;
 

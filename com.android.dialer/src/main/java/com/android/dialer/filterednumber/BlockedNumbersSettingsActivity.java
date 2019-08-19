@@ -16,9 +16,9 @@
 package com.android.dialer.filterednumber;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.dialer.R;
 import com.android.dialer.list.BlockedListSearchFragment;

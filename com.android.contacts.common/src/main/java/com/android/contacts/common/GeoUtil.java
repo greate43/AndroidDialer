@@ -20,11 +20,10 @@ import android.app.Application;
 import android.content.Context;
 
 import com.android.contacts.common.location.CountryDetector;
-
-import com.google.i18n.phonenumbers.geocoding.PhoneNumberOfflineGeocoder;
 import com.google.i18n.phonenumbers.NumberParseException;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.Phonenumber;
+import com.google.i18n.phonenumbers.geocoding.PhoneNumberOfflineGeocoder;
 
 import java.util.Locale;
 

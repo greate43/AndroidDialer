@@ -52,11 +52,9 @@ import com.android.contacts.common.util.ContactDisplayUtils;
 import com.android.dialer.R;
 import com.android.dialer.TransactionSafeActivity;
 import com.android.dialer.contact.ContactUpdateService;
-import com.android.dialer.util.IntentUtil;
+import com.android.dialer.util.DialerUtils;
 import com.android.dialer.util.IntentUtil.CallIntentBuilder;
 import com.android.incallui.Call.LogState;
-import com.android.dialer.util.DialerUtils;
-
 import com.google.common.annotations.VisibleForTesting;
 
 import java.util.ArrayList;

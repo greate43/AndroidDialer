@@ -20,7 +20,6 @@ import android.content.Context;
 import android.text.format.DateFormat;
 import android.text.format.Time;
 
-
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

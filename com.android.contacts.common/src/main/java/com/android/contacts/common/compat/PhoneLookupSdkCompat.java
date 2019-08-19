@@ -16,8 +16,6 @@
 
 package com.android.contacts.common.compat;
 
-import android.net.Uri;
-
 public class PhoneLookupSdkCompat {
     // TODO: We should reference PhoneLookup.CONTACT_ID once we update the SDK.
     public static final String CONTACT_ID = "contact_id";

@@ -15,9 +15,6 @@
  */
 package com.android.contacts.common.logging;
 
-import android.app.Activity;
-import com.android.contacts.commonbind.analytics.AnalyticsUtil;
-
 /**
  * Stores constants identifying individual screens/dialogs/fragments in the application, and also
  * provides a mapping of integer id -> screen name mappings for analytics purposes.

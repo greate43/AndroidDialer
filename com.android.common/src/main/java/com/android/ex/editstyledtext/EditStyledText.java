@@ -16,15 +16,6 @@
 
 package com.android.ex.editstyledtext;
 
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import com.android.ex.editstyledtext.EditStyledText.EditModeActions.EditModeActionBase;
-import com.android.ex.editstyledtext.EditStyledText.EditStyledTextSpans.HorizontalLineSpan;
-import com.android.ex.editstyledtext.EditStyledText.EditStyledTextSpans.MarqueeSpan;
-import com.android.ex.editstyledtext.EditStyledText.EditStyledTextSpans.RescalableImageSpan;
-
 import android.R;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -48,6 +39,8 @@ import android.os.ResultReceiver;
 import android.text.ClipboardManager;
 import android.text.Editable;
 import android.text.Html;
+import android.text.Html.ImageGetter;
+import android.text.Html.TagHandler;
 import android.text.Layout;
 import android.text.NoCopySpan;
 import android.text.NoCopySpan.Concrete;
@@ -56,8 +49,6 @@ import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextPaint;
-import android.text.Html.ImageGetter;
-import android.text.Html.TagHandler;
 import android.text.method.ArrowKeyMovementMethod;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.AlignmentSpan;
@@ -85,6 +76,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.android.ex.editstyledtext.EditStyledText.EditModeActions.EditModeActionBase;
+import com.android.ex.editstyledtext.EditStyledText.EditStyledTextSpans.HorizontalLineSpan;
+import com.android.ex.editstyledtext.EditStyledText.EditStyledTextSpans.MarqueeSpan;
+import com.android.ex.editstyledtext.EditStyledText.EditStyledTextSpans.RescalableImageSpan;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * EditStyledText extends EditText for managing the flow and status to edit the styled text. This

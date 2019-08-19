@@ -16,9 +16,6 @@
 
 package com.android.dialer.compat;
 
-import com.google.common.base.MoreObjects;
-import com.google.common.base.Preconditions;
-
 import android.app.FragmentManager;
 import android.content.ContentResolver;
 import android.content.ContentUris;
@@ -28,10 +25,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.UserManager;
 import android.preference.PreferenceManager;
-import androidx.annotation.Nullable;
 import android.telecom.TelecomManager;
 import android.telephony.PhoneNumberUtils;
 import android.util.Log;
+
+import androidx.annotation.Nullable;
 
 import com.android.contacts.common.compat.CompatUtils;
 import com.android.contacts.common.compat.TelecomManagerUtil;
@@ -49,6 +47,8 @@ import com.android.dialer.filterednumber.BlockedNumbersMigrator;
 import com.android.dialer.filterednumber.BlockedNumbersSettingsActivity;
 import com.android.dialer.filterednumber.MigrateBlockedNumbersDialogFragment;
 import com.android.dialerbind.ObjectFactory;
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Preconditions;
 
 import java.util.ArrayList;
 import java.util.List;

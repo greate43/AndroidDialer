@@ -23,7 +23,6 @@ import android.provider.ContactsContract.PhoneLookup;
 
 import com.android.contacts.common.compat.CompatUtils;
 import com.android.contacts.common.compat.PhoneLookupSdkCompat;
-import com.android.contacts.common.ContactsUtils;
 
 /**
  * The queries to look up the {@link ContactInfo} for a given number in the Call Log.

@@ -15,21 +15,22 @@
  */
 package com.android.dialer.list;
 
-import static android.Manifest.permission.CALL_PHONE;
-
 import android.app.Activity;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+
 import androidx.legacy.app.FragmentCompat;
 
 import com.android.contacts.common.list.ContactEntryListAdapter;
 import com.android.contacts.common.util.PermissionsUtil;
-import com.android.dialer.dialpad.SmartDialCursorLoader;
 import com.android.dialer.R;
+import com.android.dialer.dialpad.SmartDialCursorLoader;
 import com.android.dialer.widget.EmptyContentView;
 import com.android.incallui.Call.LogState;
+
+import static android.Manifest.permission.CALL_PHONE;
 
 /**
  * Implements a fragment to load and display SmartDial search results.

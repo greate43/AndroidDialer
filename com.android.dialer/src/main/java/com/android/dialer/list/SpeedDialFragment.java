@@ -15,8 +15,6 @@
  */
 package com.android.dialer.list;
 
-import static android.Manifest.permission.READ_CONTACTS;
-
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -31,7 +29,6 @@ import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Trace;
-import androidx.legacy.app.FragmentCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,6 +44,8 @@ import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import androidx.legacy.app.FragmentCompat;
+
 import com.android.contacts.common.ContactPhotoManager;
 import com.android.contacts.common.ContactTileLoaderFactory;
 import com.android.contacts.common.list.ContactTileView;
@@ -58,6 +57,8 @@ import com.android.incallui.Call.LogState;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
+import static android.Manifest.permission.READ_CONTACTS;
 
 /**
  * This fragment displays the user's favorite/frequent contacts in a grid.

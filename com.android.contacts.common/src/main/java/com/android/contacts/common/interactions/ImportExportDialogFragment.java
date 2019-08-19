@@ -51,8 +51,8 @@ import com.android.contacts.common.util.AccountSelectionUtil;
 import com.android.contacts.common.util.AccountsListAdapter.AccountListFilter;
 import com.android.contacts.common.util.ImplicitIntentsUtil;
 import com.android.contacts.common.vcard.ExportVCardActivity;
-import com.android.contacts.common.vcard.VCardCommonArguments;
 import com.android.contacts.common.vcard.ShareVCardActivity;
+import com.android.contacts.common.vcard.VCardCommonArguments;
 import com.android.contacts.commonbind.analytics.AnalyticsUtil;
 
 import java.util.List;

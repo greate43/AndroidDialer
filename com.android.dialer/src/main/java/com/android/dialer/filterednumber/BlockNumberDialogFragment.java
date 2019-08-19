@@ -25,7 +25,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
-import com.google.android.material.snackbar.Snackbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
@@ -36,9 +35,10 @@ import com.android.dialer.compat.FilteredNumberCompat;
 import com.android.dialer.database.FilteredNumberAsyncQueryHandler;
 import com.android.dialer.database.FilteredNumberAsyncQueryHandler.OnBlockNumberListener;
 import com.android.dialer.database.FilteredNumberAsyncQueryHandler.OnUnblockNumberListener;
-import com.android.dialer.voicemail.VisualVoicemailEnabledChecker;
 import com.android.dialer.logging.InteractionEvent;
 import com.android.dialer.logging.Logger;
+import com.android.dialer.voicemail.VisualVoicemailEnabledChecker;
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * Fragment for confirming and enacting blocking/unblocking a number. Also invokes snackbar

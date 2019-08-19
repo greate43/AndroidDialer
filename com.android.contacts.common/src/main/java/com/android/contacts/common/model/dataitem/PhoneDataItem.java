@@ -22,7 +22,6 @@ import android.provider.ContactsContract;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
 
 import com.android.contacts.common.compat.PhoneNumberUtilsCompat;
-import com.android.contacts.common.model.dataitem.DataKind;
 
 /**
  * Represents a phone data item, wrapping the columns in

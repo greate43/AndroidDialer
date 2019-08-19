@@ -42,7 +42,6 @@ import com.android.dialer.database.VoicemailArchiveContract;
 import com.android.dialer.util.AppCompatConstants;
 import com.android.dialer.util.TelecomUtil;
 import com.android.dialer.voicemail.VoicemailStatusHelperImpl;
-
 import com.google.common.collect.Lists;
 
 import java.lang.ref.WeakReference;

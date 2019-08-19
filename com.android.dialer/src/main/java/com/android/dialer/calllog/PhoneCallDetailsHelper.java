@@ -16,20 +16,18 @@
 
 package com.android.dialer.calllog;
 
-import com.google.common.base.MoreObjects;
-import com.google.common.collect.Lists;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.provider.CallLog.Calls;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
-import androidx.core.content.ContextCompat;
 import android.telecom.PhoneAccount;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import com.android.contacts.common.testing.NeededForTesting;
 import com.android.contacts.common.util.PhoneNumberHelper;
@@ -37,6 +35,8 @@ import com.android.dialer.PhoneCallDetails;
 import com.android.dialer.R;
 import com.android.dialer.calllog.calllogcache.CallLogCache;
 import com.android.dialer.util.DialerUtils;
+import com.google.common.base.MoreObjects;
+import com.google.common.collect.Lists;
 
 import java.util.ArrayList;
 import java.util.Calendar;

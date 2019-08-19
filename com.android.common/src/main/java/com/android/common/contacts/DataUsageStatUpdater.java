@@ -30,7 +30,6 @@ import android.text.TextUtils;
 import android.text.util.Rfc822Token;
 import android.text.util.Rfc822Tokenizer;
 import android.util.Log;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;

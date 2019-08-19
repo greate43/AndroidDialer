@@ -46,7 +46,6 @@ import com.android.contacts.common.extensions.ExtendedPhoneDirectoriesManager;
 import com.android.contacts.common.extensions.ExtensionsFactory;
 import com.android.contacts.common.preference.ContactsPreferences;
 import com.android.contacts.common.util.Constants;
-
 import com.google.common.collect.Lists;
 
 import java.util.ArrayList;

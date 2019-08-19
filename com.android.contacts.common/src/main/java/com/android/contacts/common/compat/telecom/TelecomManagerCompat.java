@@ -18,13 +18,14 @@ package com.android.contacts.common.compat.telecom;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import androidx.annotation.Nullable;
 import android.telecom.PhoneAccount;
 import android.telecom.PhoneAccountHandle;
 import android.telecom.TelecomManager;
 import android.telephony.PhoneNumberUtils;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
+
+import androidx.annotation.Nullable;
 
 import com.android.contacts.common.compat.CompatUtils;
 

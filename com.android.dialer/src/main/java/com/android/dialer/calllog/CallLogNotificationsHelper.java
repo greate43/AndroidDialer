@@ -16,8 +16,6 @@
 
 package com.android.dialer.calllog;
 
-import com.google.common.base.Strings;
-
 import android.Manifest;
 import android.content.ContentResolver;
 import android.content.ContentUris;
@@ -26,16 +24,17 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.provider.CallLog.Calls;
 import android.provider.ContactsContract.PhoneLookup;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import android.telephony.PhoneNumberUtils;
 import android.text.TextUtils;
 import android.util.Log;
+
+import androidx.annotation.Nullable;
 
 import com.android.contacts.common.GeoUtil;
 import com.android.contacts.common.util.PermissionsUtil;
 import com.android.dialer.R;
 import com.android.dialer.util.TelecomUtil;
+import com.google.common.base.Strings;
 
 import java.util.ArrayList;
 import java.util.List;

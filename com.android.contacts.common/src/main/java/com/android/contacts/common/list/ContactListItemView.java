@@ -30,8 +30,6 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.Contacts;
 import android.provider.ContactsContract.SearchSnippets;
-import androidx.core.content.ContextCompat;
-import androidx.core.graphics.drawable.DrawableCompat;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -49,6 +47,9 @@ import android.widget.ImageView.ScaleType;
 import android.widget.QuickContactBadge;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.DrawableCompat;
+
 import com.android.contacts.common.ContactPresenceIconUtil;
 import com.android.contacts.common.ContactStatusUtil;
 import com.android.contacts.common.R;
@@ -58,7 +59,6 @@ import com.android.contacts.common.format.TextHighlighter;
 import com.android.contacts.common.util.ContactDisplayUtils;
 import com.android.contacts.common.util.SearchUtil;
 import com.android.contacts.common.util.ViewUtil;
-
 import com.google.common.collect.Lists;
 
 import java.util.ArrayList;

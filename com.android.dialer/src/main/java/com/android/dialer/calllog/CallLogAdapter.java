@@ -16,8 +16,6 @@
 
 package com.android.dialer.calllog;
 
-import com.google.common.annotations.VisibleForTesting;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -29,8 +27,6 @@ import android.os.Trace;
 import android.preference.PreferenceManager;
 import android.provider.CallLog;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import android.telecom.PhoneAccountHandle;
 import android.telephony.PhoneNumberUtils;
 import android.telephony.TelephonyManager;
@@ -41,6 +37,9 @@ import android.view.View;
 import android.view.View.AccessibilityDelegate;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
+
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.android.contacts.common.ContactsUtils;
 import com.android.contacts.common.compat.CompatUtils;
@@ -61,6 +60,7 @@ import com.android.dialer.logging.Logger;
 import com.android.dialer.service.ExtendedBlockingButtonRenderer;
 import com.android.dialer.util.PhoneNumberUtil;
 import com.android.dialer.voicemail.VoicemailPlaybackPresenter;
+import com.google.common.annotations.VisibleForTesting;
 
 import java.util.HashMap;
 import java.util.Map;

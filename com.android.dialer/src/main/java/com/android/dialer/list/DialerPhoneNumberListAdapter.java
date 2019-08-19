@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.telephony.PhoneNumberUtils;
 import android.text.BidiFormatter;
 import android.text.TextDirectionHeuristics;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 

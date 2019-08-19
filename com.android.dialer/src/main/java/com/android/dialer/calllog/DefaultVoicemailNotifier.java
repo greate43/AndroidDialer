@@ -16,8 +16,6 @@
 
 package com.android.dialer.calllog;
 
-import com.google.common.collect.Maps;
-
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -28,13 +26,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
-import androidx.annotation.Nullable;
-import androidx.core.util.Pair;
 import android.telecom.PhoneAccount;
 import android.telecom.PhoneAccountHandle;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
+
+import androidx.annotation.Nullable;
+import androidx.core.util.Pair;
 
 import com.android.contacts.common.ContactsUtils;
 import com.android.contacts.common.compat.TelephonyManagerCompat;
@@ -45,6 +44,7 @@ import com.android.dialer.calllog.CallLogNotificationsHelper.NewCall;
 import com.android.dialer.filterednumber.FilteredNumbersUtil;
 import com.android.dialer.list.ListsFragment;
 import com.android.dialer.util.TelecomUtil;
+import com.google.common.collect.Maps;
 
 import java.util.Iterator;
 import java.util.List;

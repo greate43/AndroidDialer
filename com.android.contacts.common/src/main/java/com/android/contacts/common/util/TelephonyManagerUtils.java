@@ -16,9 +16,7 @@
 package com.android.contacts.common.util;
 
 import android.content.Context;
-import android.telephony.PhoneNumberUtils;
 import android.telephony.TelephonyManager;
-import android.text.TextUtils;
 import android.util.Log;
 
 import java.util.Locale;

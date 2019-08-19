@@ -15,8 +15,6 @@
  */
 package com.android.dialer.filterednumber;
 
-import com.google.common.base.MoreObjects;
-
 import android.app.ListFragment;
 import android.app.LoaderManager;
 import android.content.Context;
@@ -25,14 +23,15 @@ import android.content.Loader;
 import android.database.Cursor;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import androidx.core.app.ActivityCompat;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.android.contacts.common.lettertiles.LetterTileDrawable;
 import com.android.contacts.common.testing.NeededForTesting;
@@ -43,6 +42,7 @@ import com.android.dialer.filterednumber.BlockedNumbersMigrator.Listener;
 import com.android.dialer.filterednumber.FilteredNumbersUtil.CheckForSendToVoicemailContactListener;
 import com.android.dialer.filterednumber.FilteredNumbersUtil.ImportSendToVoicemailContactsListener;
 import com.android.dialer.voicemail.VisualVoicemailEnabledChecker;
+import com.google.common.base.MoreObjects;
 
 public class BlockedNumbersFragment extends ListFragment
         implements LoaderManager.LoaderCallbacks<Cursor>, View.OnClickListener,

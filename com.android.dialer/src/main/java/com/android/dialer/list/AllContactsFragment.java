@@ -16,8 +16,6 @@
 
 package com.android.dialer.list;
 
-import static android.Manifest.permission.READ_CONTACTS;
-
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -28,11 +26,12 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.provider.ContactsContract.QuickContact;
-import androidx.legacy.app.FragmentCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+
+import androidx.legacy.app.FragmentCompat;
 
 import com.android.contacts.common.compat.CompatUtils;
 import com.android.contacts.common.list.ContactEntryListAdapter;
@@ -46,6 +45,8 @@ import com.android.dialer.util.DialerUtils;
 import com.android.dialer.util.IntentUtil;
 import com.android.dialer.widget.EmptyContentView;
 import com.android.dialer.widget.EmptyContentView.OnEmptyViewActionButtonClickedListener;
+
+import static android.Manifest.permission.READ_CONTACTS;
 
 /**
  * Fragments to show all contacts with phone numbers.

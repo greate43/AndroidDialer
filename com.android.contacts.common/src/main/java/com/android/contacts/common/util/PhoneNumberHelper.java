@@ -15,17 +15,8 @@
  */
 package com.android.contacts.common.util;
 
-import android.content.Context;
 import android.telephony.PhoneNumberUtils;
-import android.text.TextUtils;
 import android.util.Log;
-
-import com.google.i18n.phonenumbers.NumberParseException;
-import com.google.i18n.phonenumbers.PhoneNumberUtil;
-import com.google.i18n.phonenumbers.Phonenumber.PhoneNumber;
-import com.google.i18n.phonenumbers.ShortNumberInfo;
-
-import java.util.Locale;
 
 /**
  * This class wraps several PhoneNumberUtil calls and TelephonyManager calls. Some of them are

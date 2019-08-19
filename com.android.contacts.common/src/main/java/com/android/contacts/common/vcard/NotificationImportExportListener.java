@@ -28,8 +28,9 @@ import android.os.Handler;
 import android.os.Message;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.RawContacts;
-import androidx.core.app.NotificationCompat;
 import android.widget.Toast;
+
+import androidx.core.app.NotificationCompat;
 
 import com.android.contacts.common.R;
 import com.android.vcard.VCardEntry;

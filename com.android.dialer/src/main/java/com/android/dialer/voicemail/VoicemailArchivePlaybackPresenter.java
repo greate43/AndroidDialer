@@ -17,15 +17,12 @@
 package com.android.dialer.voicemail;
 
 import android.app.Activity;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
-import com.android.dialer.calllog.CallLogAsyncTaskUtil;
-import com.android.dialer.database.VoicemailArchiveContract;
+
 import java.io.FileNotFoundException;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Similar to the {@link VoicemailPlaybackPresenter}, but for the archive voicemail tab. It checks

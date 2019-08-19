@@ -16,11 +16,11 @@
 package com.android.contacts.common.compat;
 
 import android.os.Build;
+import android.text.TextUtils;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.core.os.BuildCompat;
-import android.text.TextUtils;
-import android.util.Log;
 
 import com.android.contacts.common.model.CPOWrapper;
 

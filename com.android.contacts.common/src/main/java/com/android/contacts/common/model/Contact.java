@@ -27,13 +27,11 @@ import android.provider.ContactsContract.DisplayNameSources;
 import com.android.contacts.common.GroupMetaData;
 import com.android.contacts.common.model.account.AccountType;
 import com.android.contacts.common.util.DataStatus;
-
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * A Contact represents a single person or logical entity as perceived by the user.  The information

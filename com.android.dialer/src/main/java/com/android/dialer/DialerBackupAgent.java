@@ -17,9 +17,7 @@
 package com.android.dialer;
 
 import android.app.backup.BackupAgentHelper;
-import android.app.backup.BackupDataInput;
 import android.app.backup.SharedPreferencesBackupHelper;
-import android.content.Context;
 
 /**
  * The Dialer backup agent backs up the shared preferences settings of the

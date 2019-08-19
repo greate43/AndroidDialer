@@ -15,13 +15,13 @@
  */
 package com.android.contacts.common.activity;
 
-import com.android.contacts.common.R;
-
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.webkit.WebView;
+
+import com.android.contacts.common.R;
 
 /**
  * Displays the licenses for all open source libraries.

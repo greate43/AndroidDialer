@@ -24,9 +24,10 @@ import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabaseCorruptException;
 import android.net.Uri;
-import androidx.annotation.Nullable;
 import android.telephony.PhoneNumberUtils;
 import android.text.TextUtils;
+
+import androidx.annotation.Nullable;
 
 import com.android.dialer.compat.FilteredNumberCompat;
 import com.android.dialer.database.FilteredNumberContract.FilteredNumber;

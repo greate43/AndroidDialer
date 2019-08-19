@@ -16,8 +16,9 @@
 
 package com.android.common.userhappiness;
 
-import android.content.Intent;
 import android.content.Context;
+import android.content.Intent;
+
 import com.android.common.speech.LoggingEvents;
 
 /**

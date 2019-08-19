@@ -15,8 +15,7 @@
   ~ limitations under the License
    -->
 
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="account_phone" msgid="4804592866198643905">"タブレットのみ（非同期）"</string>
     <string name="composer_has_no_exportable_contact" msgid="441543908614399381">"エクスポートできる連絡先がありません。タブレットに連絡先がある場合でも、データ プロバイダによってはタブレットから連絡先をエクスポートできないことがあります。"</string>
 </resources>

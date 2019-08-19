@@ -16,9 +16,9 @@
 package com.android.dialer.calllog;
 
 import android.content.Context;
+import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.View;
 
 import com.android.contacts.common.testing.NeededForTesting;
 import com.android.dialer.R;

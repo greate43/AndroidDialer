@@ -16,12 +16,6 @@
 
 package com.android.contacts.common;
 
-import com.android.contacts.common.compat.CompatUtils;
-import com.android.contacts.common.compat.PhoneAccountSdkCompat;
-import com.android.contacts.common.util.PermissionsUtil;
-import com.android.contacts.common.util.PhoneNumberHelper;
-import com.android.phone.common.PhoneConstants;
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -30,6 +24,12 @@ import android.telecom.PhoneAccountHandle;
 import android.telecom.TelecomManager;
 import android.telecom.VideoProfile;
 import android.text.TextUtils;
+
+import com.android.contacts.common.compat.CompatUtils;
+import com.android.contacts.common.compat.PhoneAccountSdkCompat;
+import com.android.contacts.common.util.PermissionsUtil;
+import com.android.contacts.common.util.PhoneNumberHelper;
+import com.android.phone.common.PhoneConstants;
 
 import java.util.List;
 

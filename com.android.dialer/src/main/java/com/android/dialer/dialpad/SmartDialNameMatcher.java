@@ -16,11 +16,11 @@
 
 package com.android.dialer.dialpad;
 
-import androidx.annotation.Nullable;
 import android.text.TextUtils;
 
-import com.android.dialer.dialpad.SmartDialPrefix.PhoneNumberTokens;
+import androidx.annotation.Nullable;
 
+import com.android.dialer.dialpad.SmartDialPrefix.PhoneNumberTokens;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.Lists;
 

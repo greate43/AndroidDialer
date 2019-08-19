@@ -17,7 +17,6 @@
 package com.android.contacts.common.compat;
 
 import android.net.Uri;
-import android.provider.ContactsContract;
 import android.provider.ContactsContract.Directory;
 
 import com.android.contacts.common.ContactsUtils;

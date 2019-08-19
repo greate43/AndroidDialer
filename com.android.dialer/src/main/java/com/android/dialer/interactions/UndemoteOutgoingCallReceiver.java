@@ -16,21 +16,19 @@
 
 package com.android.dialer.interactions;
 
-import static android.Manifest.permission.READ_CONTACTS;
-import static android.Manifest.permission.WRITE_CONTACTS;
-
 import android.content.BroadcastReceiver;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
-import android.provider.ContactsContract;
 import android.provider.ContactsContract.PhoneLookup;
 import android.provider.ContactsContract.PinnedPositions;
 import android.text.TextUtils;
 
 import com.android.contacts.common.util.PermissionsUtil;
+
+import static android.Manifest.permission.READ_CONTACTS;
+import static android.Manifest.permission.WRITE_CONTACTS;
 
 /**
  * This broadcast receiver is used to listen to outgoing calls and undemote formerly demoted

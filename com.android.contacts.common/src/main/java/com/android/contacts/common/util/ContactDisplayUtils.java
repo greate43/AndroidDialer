@@ -16,13 +16,8 @@
 
 package com.android.contacts.common.util;
 
-import static android.provider.ContactsContract.CommonDataKinds.Phone;
-
-import com.google.common.base.Preconditions;
-
 import android.content.Context;
 import android.content.res.Resources;
-import androidx.annotation.Nullable;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.TextUtils;
@@ -30,9 +25,14 @@ import android.text.style.TtsSpan;
 import android.util.Log;
 import android.util.Patterns;
 
+import androidx.annotation.Nullable;
+
 import com.android.contacts.common.R;
 import com.android.contacts.common.compat.PhoneNumberUtilsCompat;
 import com.android.contacts.common.preference.ContactsPreferences;
+import com.google.common.base.Preconditions;
+
+import static android.provider.ContactsContract.CommonDataKinds.Phone;
 
 /**
  * Methods for handling various contact data labels.

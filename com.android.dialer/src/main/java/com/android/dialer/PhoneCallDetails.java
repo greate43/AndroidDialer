@@ -16,18 +16,19 @@
 
 package com.android.dialer;
 
-import com.android.contacts.common.ContactsUtils.UserType;
-import com.android.contacts.common.preference.ContactsPreferences;
-import com.android.contacts.common.util.ContactDisplayUtils;
-import com.android.dialer.calllog.PhoneNumberDisplayUtil;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.provider.CallLog.Calls;
-import androidx.annotation.Nullable;
 import android.telecom.PhoneAccountHandle;
 import android.text.TextUtils;
+
+import androidx.annotation.Nullable;
+
+import com.android.contacts.common.ContactsUtils.UserType;
+import com.android.contacts.common.preference.ContactsPreferences;
+import com.android.contacts.common.util.ContactDisplayUtils;
+import com.android.dialer.calllog.PhoneNumberDisplayUtil;
 
 /**
  * The details of a phone call to be shown in the UI.

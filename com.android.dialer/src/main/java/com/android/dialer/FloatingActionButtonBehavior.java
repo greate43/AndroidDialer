@@ -16,11 +16,13 @@
 package com.android.dialer;
 
 import android.content.Context;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import com.google.android.material.snackbar.Snackbar.SnackbarLayout;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
+
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+
+import com.google.android.material.snackbar.Snackbar.SnackbarLayout;
 
 /**
  * Implements custom behavior for the movement of the FAB in response to the Snackbar.

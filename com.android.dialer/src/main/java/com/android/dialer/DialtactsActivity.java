@@ -30,9 +30,6 @@ import android.os.Bundle;
 import android.os.Trace;
 import android.provider.CallLog.Calls;
 import android.speech.RecognizerIntent;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.ActionBar;
 import android.telecom.PhoneAccount;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -55,6 +52,10 @@ import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.viewpager.widget.ViewPager;
 
 import com.android.contacts.common.dialog.ClearFrequentsDialog;
 import com.android.contacts.common.interactions.ImportExportDialogFragment;

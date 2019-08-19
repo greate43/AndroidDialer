@@ -16,11 +16,9 @@
 
 package com.android.dialer.voicemail;
 
-import com.google.common.annotations.VisibleForTesting;
-
 import android.app.Activity;
-import android.content.Context;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.database.ContentObserver;
 import android.database.Cursor;
@@ -31,15 +29,17 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.provider.VoicemailContract;
-import androidx.core.content.FileProvider;
 import android.util.Log;
 import android.view.WindowManager.LayoutParams;
 
+import androidx.core.content.FileProvider;
+
+import com.android.common.io.MoreCloseables;
 import com.android.dialer.R;
 import com.android.dialer.calllog.CallLogAsyncTaskUtil;
 import com.android.dialer.util.AsyncTaskExecutor;
 import com.android.dialer.util.AsyncTaskExecutors;
-import com.android.common.io.MoreCloseables;
+import com.google.common.annotations.VisibleForTesting;
 
 import java.io.File;
 import java.io.IOException;

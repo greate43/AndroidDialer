@@ -16,8 +16,6 @@
 
 package com.android.dialer.calllog;
 
-import com.google.common.annotations.VisibleForTesting;
-
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -28,7 +26,6 @@ import android.os.AsyncTask;
 import android.provider.CallLog;
 import android.provider.VoicemailContract.Voicemails;
 import android.telecom.PhoneAccountHandle;
-import android.telephony.PhoneNumberUtils;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -42,10 +39,10 @@ import com.android.dialer.util.AsyncTaskExecutor;
 import com.android.dialer.util.AsyncTaskExecutors;
 import com.android.dialer.util.PhoneNumberUtil;
 import com.android.dialer.util.TelecomUtil;
+import com.google.common.annotations.VisibleForTesting;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Locale;
 
 public class CallLogAsyncTaskUtil {
     private static String TAG = CallLogAsyncTaskUtil.class.getSimpleName();

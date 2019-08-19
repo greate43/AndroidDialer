@@ -17,7 +17,6 @@
 package com.android.dialer.dialpad;
 
 import android.content.Context;
-
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.telephony.TelephonyManager;

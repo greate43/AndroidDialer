@@ -16,9 +16,6 @@
 
 package com.android.contacts.common;
 
-import com.google.i18n.phonenumbers.NumberParseException;
-import com.google.i18n.phonenumbers.PhoneNumberUtil;
-
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;
@@ -30,6 +27,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.android.contacts.common.model.account.AccountType;
+import com.google.i18n.phonenumbers.NumberParseException;
+import com.google.i18n.phonenumbers.PhoneNumberUtil;
 
 /**
  * Shared static contact utility methods.

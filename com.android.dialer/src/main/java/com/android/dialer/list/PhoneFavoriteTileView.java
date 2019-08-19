@@ -24,8 +24,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.android.contacts.common.ContactPhotoManager;
-import com.android.contacts.common.MoreContactUtils;
 import com.android.contacts.common.ContactPhotoManager.DefaultImageRequest;
+import com.android.contacts.common.MoreContactUtils;
 import com.android.contacts.common.list.ContactEntry;
 import com.android.contacts.common.list.ContactTileView;
 import com.android.dialer.R;

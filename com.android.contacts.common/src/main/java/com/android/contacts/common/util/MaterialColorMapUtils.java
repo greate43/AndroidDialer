@@ -16,13 +16,13 @@
 
 package com.android.contacts.common.util;
 
-import com.android.contacts.common.R;
-
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Trace;
+
+import com.android.contacts.common.R;
 
 public class MaterialColorMapUtils {
     private final TypedArray sPrimaryColors;

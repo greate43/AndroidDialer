@@ -21,14 +21,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.CallLog;
 import android.provider.CallLog.Calls;
-import androidx.legacy.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.ViewGroup;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.legacy.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.android.contacts.common.interactions.TouchPointManager;
 import com.android.contacts.common.list.ViewPagerTabs;

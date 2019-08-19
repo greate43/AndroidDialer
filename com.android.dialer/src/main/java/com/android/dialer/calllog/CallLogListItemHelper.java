@@ -23,9 +23,9 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.dialer.PhoneCallDetails;
-import com.android.dialer.util.AppCompatConstants;
 import com.android.dialer.R;
 import com.android.dialer.calllog.calllogcache.CallLogCache;
+import com.android.dialer.util.AppCompatConstants;
 
 /**
  * Helper class to fill in the views of a call log entry.

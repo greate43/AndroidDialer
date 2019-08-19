@@ -25,7 +25,6 @@ import android.provider.BaseColumns;
 import android.provider.ContactsContract;
 
 import com.android.contacts.common.compat.CompatUtils;
-import com.android.contacts.common.model.BuilderWrapper;
 import com.android.contacts.common.testing.NeededForTesting;
 import com.google.common.collect.Sets;
 

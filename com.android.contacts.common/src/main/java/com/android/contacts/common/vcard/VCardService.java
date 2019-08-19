@@ -17,27 +17,17 @@ package com.android.contacts.common.vcard;
 
 import android.app.Service;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.media.MediaScannerConnection;
 import android.media.MediaScannerConnection.MediaScannerConnectionClient;
 import android.net.Uri;
 import android.os.Binder;
-import android.os.Environment;
 import android.os.IBinder;
-import android.os.Message;
-import android.os.Messenger;
-import android.os.RemoteException;
-import android.text.TextUtils;
 import android.util.Log;
 import android.util.SparseArray;
 
-import com.android.contacts.common.R;
-
-import java.io.File;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

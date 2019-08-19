@@ -21,18 +21,19 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.ContactsContract.CommonDataKinds.Im;
-import androidx.annotation.IntDef;
-import androidx.core.os.BuildCompat;
 import android.provider.ContactsContract.DisplayPhoto;
 import android.text.TextUtils;
 import android.util.Pair;
 
-import com.android.contacts.common.model.account.AccountWithDataSet;
-import com.android.contacts.common.model.dataitem.ImDataItem;
-import com.android.contacts.common.testing.NeededForTesting;
+import androidx.annotation.IntDef;
+import androidx.core.os.BuildCompat;
+
 import com.android.contacts.common.compat.ContactsCompat;
 import com.android.contacts.common.compat.DirectoryCompat;
 import com.android.contacts.common.model.AccountTypeManager;
+import com.android.contacts.common.model.account.AccountWithDataSet;
+import com.android.contacts.common.model.dataitem.ImDataItem;
+import com.android.contacts.common.testing.NeededForTesting;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

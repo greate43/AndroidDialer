@@ -18,23 +18,16 @@ package com.android.phone.common.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Handler;
-import android.os.Vibrator;
-import android.preference.Preference;
 import android.preference.PreferenceManager;
-import android.provider.MediaStore;
 import android.provider.Settings;
 import android.text.TextUtils;
 
 import com.android.phone.common.R;
-
-import java.lang.CharSequence;
-import java.lang.String;
 
 public class SettingsUtil {
     private static final String DEFAULT_NOTIFICATION_URI_STRING =

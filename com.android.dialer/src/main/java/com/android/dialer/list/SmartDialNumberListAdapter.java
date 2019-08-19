@@ -27,9 +27,9 @@ import android.util.Log;
 import com.android.contacts.common.CallUtil;
 import com.android.contacts.common.list.ContactListItemView;
 import com.android.dialer.dialpad.SmartDialCursorLoader;
+import com.android.dialer.dialpad.SmartDialMatchPosition;
 import com.android.dialer.dialpad.SmartDialNameMatcher;
 import com.android.dialer.dialpad.SmartDialPrefix;
-import com.android.dialer.dialpad.SmartDialMatchPosition;
 
 import java.util.ArrayList;
 

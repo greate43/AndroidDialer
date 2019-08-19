@@ -16,8 +16,8 @@
 package com.android.dialer.filterednumber;
 
 import android.app.FragmentManager;
-import android.database.Cursor;
 import android.content.Context;
+import android.database.Cursor;
 import android.view.View;
 
 import com.android.contacts.common.ContactPhotoManager;

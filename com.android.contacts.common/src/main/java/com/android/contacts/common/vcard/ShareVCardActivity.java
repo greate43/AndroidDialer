@@ -18,8 +18,9 @@ package com.android.contacts.common.vcard;
 import android.content.ComponentName;
 import android.net.Uri;
 import android.os.IBinder;
-import androidx.core.content.FileProvider;
 import android.util.Log;
+
+import androidx.core.content.FileProvider;
 
 import com.android.contacts.common.R;
 

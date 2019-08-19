@@ -15,24 +15,24 @@
  */
 package com.android.dialer.list;
 
-import static android.Manifest.permission.READ_CONTACTS;
-
 import android.app.Activity;
 import android.content.pm.PackageManager;
-import androidx.legacy.app.FragmentCompat;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import androidx.legacy.app.FragmentCompat;
 
 import com.android.contacts.common.list.ContactEntryListAdapter;
 import com.android.contacts.common.list.PinnedHeaderListView;
 import com.android.contacts.common.util.PermissionsUtil;
-import com.android.dialerbind.ObjectFactory;
-import com.android.incallui.Call.LogState;
-
 import com.android.dialer.R;
 import com.android.dialer.service.CachedNumberLookupService;
 import com.android.dialer.widget.EmptyContentView;
 import com.android.dialer.widget.EmptyContentView.OnEmptyViewActionButtonClickedListener;
+import com.android.dialerbind.ObjectFactory;
+import com.android.incallui.Call.LogState;
+
+import static android.Manifest.permission.READ_CONTACTS;
 
 public class RegularSearchFragment extends SearchFragment
         implements OnEmptyViewActionButtonClickedListener,

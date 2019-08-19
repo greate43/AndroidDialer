@@ -16,13 +16,12 @@
 
 package com.android.dialer.calllog;
 
-import com.google.common.collect.Lists;
-
 import android.provider.CallLog.Calls;
 
 import com.android.contacts.common.compat.CompatUtils;
 import com.android.dialer.compat.CallsSdkCompat;
 import com.android.dialer.compat.DialerCompatUtils;
+import com.google.common.collect.Lists;
 
 import java.util.List;
 

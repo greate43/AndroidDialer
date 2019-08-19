@@ -18,10 +18,6 @@ package com.android.dialer.calllog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.telecom.TelecomManager;
-import android.util.Log;
-
-import com.android.dialer.calllog.CallLogNotificationsService;
 
 /**
  * Receives broadcasts that should trigger a refresh of the missed call notification. This includes

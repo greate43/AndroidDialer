@@ -15,10 +15,6 @@
  */
 package com.android.dialer.list;
 
-import com.google.common.annotations.VisibleForTesting;
-import com.google.common.collect.ComparisonChain;
-import com.google.common.collect.Lists;
-
 import android.content.ContentProviderOperation;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -46,6 +42,9 @@ import com.android.contacts.common.list.ContactTileAdapter.DisplayType;
 import com.android.contacts.common.list.ContactTileView;
 import com.android.contacts.common.preference.ContactsPreferences;
 import com.android.dialer.R;
+import com.google.common.annotations.VisibleForTesting;
+import com.google.common.collect.ComparisonChain;
+import com.google.common.collect.Lists;
 
 import java.util.ArrayList;
 import java.util.Comparator;

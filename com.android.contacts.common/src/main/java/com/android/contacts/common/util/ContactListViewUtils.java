@@ -1,11 +1,11 @@
 package com.android.contacts.common.util;
 
 
-import com.android.contacts.common.R;
-
 import android.content.res.Resources;
 import android.view.View;
 import android.widget.ListView;
+
+import com.android.contacts.common.R;
 
 /**
  * Utilities for configuring ListViews with a card background.

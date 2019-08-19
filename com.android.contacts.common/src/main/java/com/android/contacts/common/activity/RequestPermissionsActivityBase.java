@@ -16,16 +16,17 @@
 
 package com.android.contacts.common.activity;
 
-import com.android.contacts.common.model.AccountTypeManager;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Trace;
+
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import com.android.contacts.common.model.AccountTypeManager;
 
 import java.util.ArrayList;
 import java.util.Arrays;

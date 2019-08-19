@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<paths xmlns:android="http://schemas.android.com/apk/res/android">
+<paths>
     <!-- Offer access to files under Context.getCacheDir() -->
      <cache-path name="my_cache" />
      <!-- Offer access to voicemail folder under Context.getFilesDir() -->
