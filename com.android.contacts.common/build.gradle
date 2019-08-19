@@ -28,6 +28,13 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
     implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.10.17'
+    implementation group: 'com.googlecode.libphonenumber', name: 'geocoder', version: '2.123'
+    //implementation group: 'com.googlecode.ez-vcard', name: 'ez-vcard', version: '0.10.5'
+
+    implementation files('libs/com.android.vcard.jar')
+
+    api 'com.google.guava:guava:28.0-android'
     implementation project(':com.android.common')
     implementation project(':com.android.phone.common')
     // Core library
@@ -36,4 +43,8 @@ dependencies {
     // AndroidJUnitRunner and JUnit Rules
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test:rules:1.2.0'
+
+    // Assertions
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+
 }

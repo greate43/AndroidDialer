@@ -18,6 +18,7 @@ package com.android.contacts.common.logging;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
 /**
@@ -70,7 +71,7 @@ public final class SearchState implements Parcelable {
 
     @Override
     public String toString() {
-        return Objects.toStringHelper(this)
+        return MoreObjects.toStringHelper(this)
                 .add("queryLength", queryLength)
                 .add("numPartitions", numPartitions)
                 .add("numResults", numResults)

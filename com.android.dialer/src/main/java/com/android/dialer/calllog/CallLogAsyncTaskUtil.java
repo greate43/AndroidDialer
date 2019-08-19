@@ -29,6 +29,8 @@ import android.telecom.PhoneAccountHandle;
 import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.annotation.VisibleForTesting;
+
 import com.android.contacts.common.GeoUtil;
 import com.android.contacts.common.compat.CompatUtils;
 import com.android.contacts.common.util.PermissionsUtil;
@@ -39,7 +41,6 @@ import com.android.dialer.util.AsyncTaskExecutor;
 import com.android.dialer.util.AsyncTaskExecutors;
 import com.android.dialer.util.PhoneNumberUtil;
 import com.android.dialer.util.TelecomUtil;
-import com.google.common.annotations.VisibleForTesting;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -447,6 +448,9 @@ public class CallLogAsyncTaskUtil {
                     ContentValues values = new ContentValues(1);
                     values.put(CallLog.Calls.DURATION, duration);
                     context.getContentResolver().update(voicemailUri, values, null, null);
+                }
+                if (cursor != null) {
+                    cursor.close();
                 }
                 return null;
             }

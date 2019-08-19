@@ -30,4 +30,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.legacy:legacy-support-v13:1.0.0'
     implementation 'com.umeng.analytics:analytics:6.1.4'
+    implementation project(path: ':com.android.common')
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.10.17'
+    implementation group: 'com.googlecode.libphonenumber', name: 'geocoder', version: '2.123'
 }

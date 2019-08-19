@@ -863,7 +863,7 @@ public class DialerDatabaseHelper extends SQLiteOpenHelper {
      * @param nameCursor Cursor pointing to the list of distinct updated contacts.
      */
     @VisibleForTesting
-    void insertNamePrefixes(SQLiteDatabase db, Cursor nameCursor) {
+    private void insertNamePrefixes(SQLiteDatabase db, Cursor nameCursor) {
         final int columnIndexName = nameCursor.getColumnIndex(
                 SmartDialDbColumns.DISPLAY_NAME_PRIMARY);
         final int columnIndexContactId = nameCursor.getColumnIndex(SmartDialDbColumns.CONTACT_ID);
@@ -1062,12 +1062,13 @@ public class DialerDatabaseHelper extends SQLiteOpenHelper {
 
             final SharedPreferences.Editor editor = databaseLastUpdateSharedPref.edit();
             editor.putLong(LAST_UPDATED_MILLIS, currentMillis);
-            editor.commit();
+            editor.apply();
 
             // Notify content observers that smart dial database has been updated.
             mContext.getContentResolver().notifyChange(SMART_DIAL_UPDATED_URI, null, false);
         }
     }
+
 
     /**
      * Returns a list of candidate contacts where the query is a prefix of the dialpad index of

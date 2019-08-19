@@ -21,6 +21,7 @@ import android.text.TextUtils;
 
 import com.android.contacts.common.ContactsUtils.UserType;
 import com.android.contacts.common.util.UriUtils;
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
 /**
@@ -97,7 +98,7 @@ public class ContactInfo {
 
     @Override
     public String toString() {
-        return Objects.toStringHelper(this).add("lookupUri", lookupUri).add("name", name)
+        return MoreObjects.toStringHelper(this).add("lookupUri", lookupUri).add("name", name)
                 .add("nameAlternative", nameAlternative)
                 .add("type", type).add("label", label)
                 .add("number", number).add("formattedNumber",formattedNumber)

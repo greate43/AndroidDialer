@@ -16,7 +16,8 @@
 
 <paths>
     <!-- Offer access to files under Context.getCacheDir() -->
-     <cache-path name="my_cache" />
+     <cache-path name="my_cache"
+         path="/" />
      <!-- Offer access to voicemail folder under Context.getFilesDir() -->
      <files-path name="voicemails" path="voicemails/" />
 </paths>

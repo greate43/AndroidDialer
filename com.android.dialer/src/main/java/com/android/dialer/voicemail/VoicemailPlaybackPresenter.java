@@ -36,7 +36,9 @@ import androidx.core.content.FileProvider;
 
 import com.android.common.io.MoreCloseables;
 import com.android.dialer.R;
+import com.android.dialer.calllog.CallLogAdapter;
 import com.android.dialer.calllog.CallLogAsyncTaskUtil;
+import com.android.dialer.calllog.CallLogFragment;
 import com.android.dialer.util.AsyncTaskExecutor;
 import com.android.dialer.util.AsyncTaskExecutors;
 import com.google.common.annotations.VisibleForTesting;
@@ -72,7 +74,7 @@ import javax.annotation.concurrent.ThreadSafe;
 public class VoicemailPlaybackPresenter implements MediaPlayer.OnPreparedListener,
                 MediaPlayer.OnCompletionListener, MediaPlayer.OnErrorListener {
 
-    private static final String TAG = "VmPlaybackPresenter";
+    private static final String TAG = "com.android.dialer.voicemail:VmPlaybackPresenter";
 
     /** Contract describing the behaviour we need from the ui we are controlling. */
     public interface PlaybackView {
@@ -206,7 +208,7 @@ public class VoicemailPlaybackPresenter implements MediaPlayer.OnPreparedListene
         mVoicemailAsyncTaskUtil = new VoicemailAsyncTaskUtil(context.getContentResolver());
         PowerManager powerManager =
                 (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-        if (powerManager.isWakeLockLevelSupported(PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK)) {
+        if (powerManager != null && powerManager.isWakeLockLevelSupported(PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK)) {
             mProximityWakeLock = powerManager.newWakeLock(
                     PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK, TAG);
         }
