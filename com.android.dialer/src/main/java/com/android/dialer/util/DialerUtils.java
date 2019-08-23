@@ -25,6 +25,7 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.graphics.Point;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Telephony;
 import android.telecom.TelecomManager;
@@ -34,6 +35,8 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 
 import com.android.contacts.common.ContactsUtils;
 import com.android.contacts.common.interactions.TouchPointManager;
@@ -75,16 +78,22 @@ public class DialerUtils {
                 // All dialer-initiated calls should pass the touch point to the InCallUI
                 Point touchPoint = TouchPointManager.getInstance().getPoint();
                 if (touchPoint.x != 0 || touchPoint.y != 0) {
-                    Bundle extras;
+                    Bundle extras = null;
                     // Make sure to not accidentally clobber any existing extras
                     if (intent.hasExtra(TelecomManager.EXTRA_OUTGOING_CALL_EXTRAS)) {
-                        extras = intent.getParcelableExtra(
-                                TelecomManager.EXTRA_OUTGOING_CALL_EXTRAS);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            extras = intent.getParcelableExtra(
+                                    TelecomManager.EXTRA_OUTGOING_CALL_EXTRAS);
+                        }
                     } else {
                         extras = new Bundle();
                     }
-                    extras.putParcelable(TouchPointManager.TOUCH_POINT, touchPoint);
-                    intent.putExtra(TelecomManager.EXTRA_OUTGOING_CALL_EXTRAS, extras);
+                    if (extras != null) {
+                        extras.putParcelable(TouchPointManager.TOUCH_POINT, touchPoint);
+                    }
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        intent.putExtra(TelecomManager.EXTRA_OUTGOING_CALL_EXTRAS, extras);
+                    }
                 }
 
                 final boolean hasCallPermission = TelecomUtil.placeCall((Activity) context, intent);
@@ -92,7 +101,7 @@ public class DialerUtils {
                     // TODO: Make calling activity show request permission dialog and handle
                     // callback results appropriately.
                     Toast.makeText(context, "Cannot place call without Phone permission",
-                            Toast.LENGTH_SHORT);
+                            Toast.LENGTH_SHORT).show();
                 }
             } else {
                 context.startActivity(intent);

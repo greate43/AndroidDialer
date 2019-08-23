@@ -18,6 +18,7 @@ package com.android.dialer.util;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.telecom.PhoneAccountHandle;
@@ -88,14 +89,20 @@ public class IntentUtil {
     public static Intent getCallIntent(
             Uri uri, PhoneAccountHandle accountHandle, int videoState, int callIntiationType) {
         final Intent intent = new Intent(CALL_ACTION, uri);
-        intent.putExtra(TelecomManager.EXTRA_START_CALL_WITH_VIDEO_STATE, videoState);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            intent.putExtra(TelecomManager.EXTRA_START_CALL_WITH_VIDEO_STATE, videoState);
+        }
 
         final Bundle b = new Bundle();
         b.putInt(EXTRA_CALL_INITIATION_TYPE, callIntiationType);
-        intent.putExtra(TelecomManager.EXTRA_OUTGOING_CALL_EXTRAS, b);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            intent.putExtra(TelecomManager.EXTRA_OUTGOING_CALL_EXTRAS, b);
+        }
 
         if (accountHandle != null) {
-            intent.putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, accountHandle);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                intent.putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, accountHandle);
+            }
         }
 
         return intent;

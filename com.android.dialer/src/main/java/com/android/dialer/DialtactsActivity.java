@@ -18,6 +18,7 @@ package com.android.dialer;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.app.role.RoleManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -26,11 +27,14 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Trace;
 import android.provider.CallLog.Calls;
+import android.provider.Telephony;
 import android.speech.RecognizerIntent;
 import android.telecom.PhoneAccount;
+import android.telecom.TelecomManager;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -142,6 +146,7 @@ public class DialtactsActivity extends TransactionSafeActivity implements View.O
     private static final int ACTIVITY_REQUEST_CODE_VOICE_SEARCH = 1;
 
     private static final int FAB_SCALE_IN_DELAY_MS = 300;
+    private static final int REQUEST_DEFAULT_DIALER_APP_CHANGE = 901;
 
     private CoordinatorLayout mParentLayout;
 
@@ -373,13 +378,31 @@ public class DialtactsActivity extends TransactionSafeActivity implements View.O
         return super.dispatchTouchEvent(ev);
     }
 
+    private void changeToDefaultApp(Context context) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            RoleManager roleManager = context.getSystemService(RoleManager.class);
+            Intent roleRequestIntent = roleManager.createRequestRoleIntent(
+                    RoleManager.ROLE_DIALER
+            );
+            startActivityForResult(roleRequestIntent, REQUEST_DEFAULT_DIALER_APP_CHANGE);
+        } else {
+            Intent setDialerAppIntent =
+                    new Intent(TelecomManager.ACTION_CHANGE_DEFAULT_DIALER);
+
+            setDialerAppIntent.putExtra(TelecomManager.EXTRA_CHANGE_DEFAULT_DIALER_PACKAGE_NAME, context.getPackageName());
+
+            startActivityForResult(setDialerAppIntent, REQUEST_DEFAULT_DIALER_APP_CHANGE);
+        }
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Trace.beginSection(TAG + " onCreate");
         super.onCreate(savedInstanceState);
-
         // add by geniusgithub
         boolean hasStartPermissionActivity = ForceRequestPermissionsActivity.startPermissionActivity(this);
+        changeToDefaultApp(this);
 
         // add by geniusgithub
 
@@ -395,7 +418,9 @@ public class DialtactsActivity extends TransactionSafeActivity implements View.O
 
         Trace.beginSection(TAG + " setup Views");
         final ActionBar actionBar = getSupportActionBar();
-        actionBar.setCustomView(R.layout.search_edittext);
+        if (actionBar != null) {
+            actionBar.setCustomView(R.layout.search_edittext);
+        }
         actionBar.setDisplayShowCustomEnabled(true);
         actionBar.setBackgroundDrawable(null);
 
@@ -734,6 +759,7 @@ public class DialtactsActivity extends TransactionSafeActivity implements View.O
     /**
      * Initiates a fragment transaction to show the dialpad fragment. Animations and other visual
      * updates are handled by a callback which is invoked after the dialpad fragment is shown.
+     *
      * @see #onDialpadShown
      */
     private void showDialpadFragment(boolean animate) {
@@ -787,6 +813,7 @@ public class DialtactsActivity extends TransactionSafeActivity implements View.O
     /**
      * Initiates animations and other visual updates to hide the dialpad. The fragment is hidden in
      * a callback after the hide animation ends.
+     *
      * @see #commitDialpadFragmentHide
      */
     public void hideDialpadFragment(boolean animate, boolean clearDialpad) {
@@ -896,7 +923,7 @@ public class DialtactsActivity extends TransactionSafeActivity implements View.O
         return false;
     }
 
-    protected int getSearchBoxHint () {
+    protected int getSearchBoxHint() {
         return R.string.dialer_hint_find_contact;
     }
 
@@ -984,7 +1011,9 @@ public class DialtactsActivity extends TransactionSafeActivity implements View.O
         invalidateOptionsMenu();
     }
 
-    /** Returns true if the given intent contains a phone number to populate the dialer with */
+    /**
+     * Returns true if the given intent contains a phone number to populate the dialer with
+     */
     private boolean isDialIntent(Intent intent) {
         final String action = intent.getAction();
         if (Intent.ACTION_DIAL.equals(action) || ACTION_TOUCH_DIALER.equals(action)) {
@@ -1264,7 +1293,8 @@ public class DialtactsActivity extends TransactionSafeActivity implements View.O
     }
 
     @Override
-    public void onDroppedOnRemove() {}
+    public void onDroppedOnRemove() {
+    }
 
     /**
      * Allows the SpeedDialFragment to attach the drag controller to mRemoveViewContainer

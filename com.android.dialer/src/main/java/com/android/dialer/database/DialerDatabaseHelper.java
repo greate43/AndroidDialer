@@ -27,6 +27,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.provider.BaseColumns;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
@@ -102,7 +103,7 @@ public class DialerDatabaseHelper extends SQLiteOpenHelper {
     }
 
     public static final Uri SMART_DIAL_UPDATED_URI =
-            Uri.parse("content://com.android.dialer/smart_dial_updated");
+            Uri.parse("content://com.android.dialer.database.filterednumberprovider/smart_dial_updated");
 
     public interface SmartDialDbColumns {
         static final String _ID = "id";
@@ -135,7 +136,9 @@ public class DialerDatabaseHelper extends SQLiteOpenHelper {
     // change by geniusgithub begin
     static {
         if (CompatUtils.isMarshmallowCompatible()) {
-            PhoneQuery.PROJECTION[PhoneQuery.PHONE_CARRIER_PRESENCE] = Data.CARRIER_PRESENCE;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                PhoneQuery.PROJECTION[PhoneQuery.PHONE_CARRIER_PRESENCE] = Data.CARRIER_PRESENCE;
+            }
         }
     }
     // change by geniusgithub end
@@ -576,7 +579,7 @@ public class DialerDatabaseHelper extends SQLiteOpenHelper {
                 DATABASE_LAST_CREATED_SHARED_PREF, Context.MODE_PRIVATE);
         final SharedPreferences.Editor editor = databaseLastUpdateSharedPref.edit();
         editor.putLong(LAST_UPDATED_MILLIS, 0);
-        editor.commit();
+        editor.apply();
     }
 
     /**
@@ -1063,6 +1066,7 @@ public class DialerDatabaseHelper extends SQLiteOpenHelper {
             final SharedPreferences.Editor editor = databaseLastUpdateSharedPref.edit();
             editor.putLong(LAST_UPDATED_MILLIS, currentMillis);
             editor.apply();
+
 
             // Notify content observers that smart dial database has been updated.
             mContext.getContentResolver().notifyChange(SMART_DIAL_UPDATED_URI, null, false);

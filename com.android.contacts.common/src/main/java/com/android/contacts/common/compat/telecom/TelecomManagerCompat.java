@@ -18,6 +18,7 @@ package com.android.contacts.common.compat.telecom;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.telecom.PhoneAccount;
 import android.telecom.PhoneAccountHandle;
 import android.telecom.TelecomManager;
@@ -51,7 +52,9 @@ public class TelecomManagerCompat {
             return;
         }
         if (CompatUtils.isMarshmallowCompatible()) {
-            telecomManager.placeCall(intent.getData(), intent.getExtras());
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                telecomManager.placeCall(intent.getData(), intent.getExtras());
+            }
             return;
         }
         activity.startActivityForResult(intent, 0);
@@ -68,10 +71,12 @@ public class TelecomManagerCompat {
      */
     public static Uri getAdnUriForPhoneAccount(@Nullable TelecomManager telecomManager,
             PhoneAccountHandle accountHandle) {
-        if (telecomManager != null && (CompatUtils.isMarshmallowCompatible()
-                || CompatUtils.isMethodAvailable(TELECOM_MANAGER_CLASS, "getAdnUriForPhoneAccount",
-                        PhoneAccountHandle.class))) {
-            return telecomManager.getAdnUriForPhoneAccount(accountHandle);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (telecomManager != null && (CompatUtils.isMarshmallowCompatible()
+                    || CompatUtils.isMethodAvailable(TELECOM_MANAGER_CLASS, "getAdnUriForPhoneAccount",
+                            PhoneAccountHandle.class))) {
+                return telecomManager.getAdnUriForPhoneAccount(accountHandle);
+            }
         }
         return Uri.parse("content://icc/adn");
     }
@@ -89,7 +94,9 @@ public class TelecomManagerCompat {
         if (telecomManager != null && (CompatUtils.isMarshmallowCompatible()
                 || CompatUtils.isMethodAvailable(TELECOM_MANAGER_CLASS,
                         "getCallCapablePhoneAccounts"))) {
-            return telecomManager.getCallCapablePhoneAccounts();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                return telecomManager.getCallCapablePhoneAccounts();
+            }
         }
         return new ArrayList<>();
     }
@@ -104,7 +111,9 @@ public class TelecomManagerCompat {
     @Nullable
     public static String getDefaultDialerPackage(@Nullable TelecomManager telecomManager) {
         if (telecomManager != null && CompatUtils.isDefaultDialerCompatible()) {
-            return telecomManager.getDefaultDialerPackage();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                return telecomManager.getDefaultDialerPackage();
+            }
         }
         return null;
     }
@@ -132,7 +141,9 @@ public class TelecomManagerCompat {
         if (telecomManager != null && (CompatUtils.isMarshmallowCompatible()
                 || CompatUtils.isMethodAvailable(TELECOM_MANAGER_CLASS,
                         "getDefaultOutgoingPhoneAccount", String.class))) {
-            return telecomManager.getDefaultOutgoingPhoneAccount(uriScheme);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                return telecomManager.getDefaultOutgoingPhoneAccount(uriScheme);
+            }
         }
         return null;
     }
@@ -152,7 +163,9 @@ public class TelecomManagerCompat {
             @Nullable TelephonyManager telephonyManager,
             @Nullable PhoneAccountHandle phoneAccountHandle) {
         if (telecomManager != null && CompatUtils.isMarshmallowCompatible()) {
-            return telecomManager.getLine1Number(phoneAccountHandle);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                return telecomManager.getLine1Number(phoneAccountHandle);
+            }
         }
         if (telephonyManager != null) {
             return telephonyManager.getLine1Number();
@@ -170,10 +183,12 @@ public class TelecomManagerCompat {
      */
     public static boolean isVoiceMailNumber(@Nullable TelecomManager telecomManager,
             @Nullable PhoneAccountHandle accountHandle, @Nullable String number) {
-        if (telecomManager != null && (CompatUtils.isMarshmallowCompatible()
-                || CompatUtils.isMethodAvailable(TELECOM_MANAGER_CLASS, "isVoiceMailNumber",
-                        PhoneAccountHandle.class, String.class))) {
-            return telecomManager.isVoiceMailNumber(accountHandle, number);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (telecomManager != null && (CompatUtils.isMarshmallowCompatible()
+                    || CompatUtils.isMethodAvailable(TELECOM_MANAGER_CLASS, "isVoiceMailNumber",
+                            PhoneAccountHandle.class, String.class))) {
+                return telecomManager.isVoiceMailNumber(accountHandle, number);
+            }
         }
         return PhoneNumberUtils.isVoiceMailNumber(number);
     }
@@ -189,9 +204,11 @@ public class TelecomManagerCompat {
     @Nullable
     public static PhoneAccount getPhoneAccount(@Nullable TelecomManager telecomManager,
             @Nullable PhoneAccountHandle accountHandle) {
-        if (telecomManager != null && (CompatUtils.isMethodAvailable(
-                TELECOM_MANAGER_CLASS, "getPhoneAccount", PhoneAccountHandle.class))) {
-            return telecomManager.getPhoneAccount(accountHandle);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (telecomManager != null && (CompatUtils.isMethodAvailable(
+                    TELECOM_MANAGER_CLASS, "getPhoneAccount", PhoneAccountHandle.class))) {
+                return telecomManager.getPhoneAccount(accountHandle);
+            }
         }
         return null;
     }
@@ -211,11 +228,13 @@ public class TelecomManagerCompat {
     public static String getVoiceMailNumber(@Nullable TelecomManager telecomManager,
             @Nullable TelephonyManager telephonyManager,
             @Nullable PhoneAccountHandle accountHandle) {
-        if (telecomManager != null && (CompatUtils.isMethodAvailable(
-                TELECOM_MANAGER_CLASS, "getVoiceMailNumber", PhoneAccountHandle.class))) {
-            return telecomManager.getVoiceMailNumber(accountHandle);
-        } else if (telephonyManager != null){
-            return telephonyManager.getVoiceMailNumber();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (telecomManager != null && (CompatUtils.isMethodAvailable(
+                    TELECOM_MANAGER_CLASS, "getVoiceMailNumber", PhoneAccountHandle.class))) {
+                return telecomManager.getVoiceMailNumber(accountHandle);
+            } else if (telephonyManager != null){
+                return telephonyManager.getVoiceMailNumber();
+            }
         }
         return null;
     }
@@ -235,14 +254,19 @@ public class TelecomManagerCompat {
             return false;
         }
         if (CompatUtils.isMarshmallowCompatible()) {
-            return telecomManager.handleMmi(dialString, accountHandle);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                return telecomManager.handleMmi(dialString, accountHandle);
+            }
         }
 
-        Object handleMmiResult = CompatUtils.invokeMethod(
-                telecomManager,
-                "handleMmi",
-                new Class<?>[] {PhoneAccountHandle.class, String.class},
-                new Object[] {accountHandle, dialString});
+        Object handleMmiResult = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            handleMmiResult = CompatUtils.invokeMethod(
+                    telecomManager,
+                    "handleMmi",
+                    new Class<?>[] {PhoneAccountHandle.class, String.class},
+                    new Object[] {accountHandle, dialString});
+        }
         if (handleMmiResult != null) {
             return (boolean) handleMmiResult;
         }
@@ -259,7 +283,9 @@ public class TelecomManagerCompat {
     public static void silenceRinger(@Nullable TelecomManager telecomManager) {
         if (telecomManager != null && (CompatUtils.isMarshmallowCompatible() || CompatUtils
                 .isMethodAvailable(TELECOM_MANAGER_CLASS, "silenceRinger"))) {
-            telecomManager.silenceRinger();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                telecomManager.silenceRinger();
+            }
         }
     }
 
@@ -274,7 +300,9 @@ public class TelecomManagerCompat {
     public static PhoneAccountHandle getSimCallManager(TelecomManager telecomManager) {
         if (telecomManager != null && (CompatUtils.isMarshmallowCompatible() || CompatUtils
                 .isMethodAvailable(TELECOM_MANAGER_CLASS, "getSimCallManager"))) {
-            return telecomManager.getSimCallManager();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                return telecomManager.getSimCallManager();
+            }
         }
         return null;
     }
